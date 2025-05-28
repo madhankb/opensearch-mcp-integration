@@ -1,0 +1,25 @@
+# Docker Compose files
+docker-compose.yml linguist-language=YAML
+https-docker-compose.yml linguist-language=YAML
+
+# Configuration files
+*.json linguist-language=JSON
+Opensearch-mcp-config.json linguist-language=JSON
+
+# Shell scripts
+*.sh linguist-language=Shell
+generate-certs.sh linguist-language=Shell
+
+# Documentation
+*.md linguist-documentation=true
+README.md linguist-documentation=true
+
+# Set default behavior for all files
+* text=auto eol=lf
+
+# Explicitly declare text files to be normalized
+*.yml text
+*.yaml text
+*.json text
+*.sh text
+*.md text
