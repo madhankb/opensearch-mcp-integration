@@ -98,26 +98,6 @@ This guide provides step-by-step instructions for setting up OpenSearch with Ama
    ```json
    {
      "mcpServers": {
-       "github": {
-         "command": "npx",
-         "args": [
-           "-y",
-           "@modelcontextprotocol/server-github"
-         ],
-         "env": {
-           "GITHUB_PERSONAL_ACCESS_TOKEN": "your-github-token"
-         }
-       },
-       "awslabs.core-mcp-server": {
-         "command": "uvx",
-         "args": [
-           "awslabs.core-mcp-server@latest"
-         ],
-         "env": {
-           "FASTMCP_LOG_LEVEL": "ERROR"
-         },
-         "disabled": false
-       },
        "opensearch-mcp-server": {
          "command": "/Users/YOUR_USERNAME/.local/bin/opensearch-mcp-server",
          "args": [],
