@@ -148,12 +148,22 @@ Here are some example commands you can try in Amazon Q:
 
 The OpenSearch MCP server provides several tools for interacting with OpenSearch:
 
-- `create_index`: Create new indices
-- `delete_index`: Remove indices
-- `index_document`: Add documents to an index
-- `search_documents`: Search for documents
-- `get_index`: Get index information
-- And more...
+- `list_indices`: List all indices.
+- `get_index`: Returns information (mappings, settings, aliases) about one or more indices. Args: index: Name of the index
+- `create_index`: Create a new index. Args: index: Name of the index body: Optional index configuration including mappings and settings
+- `delete_index`: Delete an index. Args: index: Name of the index
+- `search_documents`: Search for documents. Args: index: Name of the index body: Search query
+- `index_document`: Creates or updates a document in the index. Args: index: Name of the index document: Document data id: Optional document ID
+- `get_document`: Get a document by ID. Args: index: Name of the index id: Document ID
+- `delete_document`: Delete a document by ID. Args: index: Name of the index id: Document ID
+- `delete_by_query`: Deletes documents matching the provided query. Args: index: Name of the index body: Query to match documents for deletion
+- `get_cluster_health`: Returns basic information about the health of the cluster.
+- `get_cluster_stats`: Returns high-level overview of cluster statistics.
+- `list_aliases`: List all aliases.
+- `get_alias`: Get alias information for a specific index. Args: index: Name of the index
+- `put_alias`: Create or update an alias for a specific index. Args: index: Name of the index name: Name of the alias body: Alias configuration
+- `delete_alias`: Delete an alias for a specific index. Args: index: Name of the index name: Name of the alias
+- `general_api_request`: Perform a general HTTP API request. Use this tool for any Elasticsearch/OpenSearch API that does not have a dedicated tool. Args: method: HTTP method (GET, POST, PUT, DELETE, etc.) path: API endpoint path params: Query parameters body: Request body
 
 ## Security Notes
 
@@ -165,4 +175,4 @@ The OpenSearch MCP server provides several tools for interacting with OpenSearch
 
 - [OpenSearch Documentation](https://opensearch.org/docs/latest/)
 - [Amazon Q Documentation](https://docs.aws.amazon.com/amazonq/)
-- [MCP Protocol Documentation](https://github.com/aws/model-context-protocol)
+- [MCP Protocol Documentation](https://modelcontextprotocol.io/introduction)
