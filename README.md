@@ -99,7 +99,8 @@ This guide provides step-by-step instructions for integrating Amazon Q/Anthropic
          "command": "/Users/YOUR_USERNAME/.local/bin/opensearch-mcp-server",
          "args": [],
          "env": {
-           "OPENSEARCH_URL": "http://localhost:9200",
+           "OPENSEARCH_URL": "https://localhost:9200",
+           "OPENSEARCH_SSL_VERIFY": "none",
            "OPENSEARCH_USERNAME": "admin",
            "OPENSEARCH_PASSWORD": "myStrongPassword123!"
          }
