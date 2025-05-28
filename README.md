@@ -7,8 +7,8 @@ This guide provides step-by-step instructions for integrating Amazon Q/Anthropic
 - Docker and Docker Compose installed
 - Python 3.x installed
 - pipx installed (`pip install pipx`)
-- Amazon Q
-- Anthropic Claude 
+- Amazon Q CLI
+- Anthropic Claude Desktop
 
 ## 1. Setting up Local OpenSearch Instance
 
