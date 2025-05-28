@@ -27,11 +27,9 @@ services:
     image: opensearchproject/opensearch-dashboards:latest
     environment:
       - 'OPENSEARCH_HOSTS=["http://opensearch:9200"]'
-      - "OPENSEARCH_SECURITY_ADMIN_PASSWORD=myStrongPassword123!"
+      - "DISABLE_SECURITY_DASHBOARDS_PLUGIN=true"
     ports:
       - 5601:5601
-    depends_on:
-      - opensearch
     networks:
       - opensearch-net
 
