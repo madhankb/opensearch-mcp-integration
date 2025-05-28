@@ -129,7 +129,7 @@ This guide provides step-by-step instructions for integrating Amazon Q & Anthrop
 
 ## 5. Using Natural Language with OpenSearch
 
-Here are some example commands you can try in Amazon Q:
+Here are some example commands you can try in LLMs:
 
 1. Create an index:
    ```
