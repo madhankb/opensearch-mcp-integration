@@ -1,26 +1,19 @@
 # Architecture Overview
 
-The integration between Amazon Q, MCP servers, and OpenSearch involves several components working together to provide natural language interaction with OpenSearch.
+The integration between Amazon Q and OpenSearch involves a streamlined architecture that enables natural language interaction with OpenSearch through the MCP server.
 
 ## Architecture Diagram
 
-![Architecture Diagram](../generated-diagrams/mcp-opensearch-architecture.png)
+![Architecture Diagram](../generated-diagrams/mcp-opensearch-focused-architecture.png)
 
 ## Components
 
 ### User Environment
 - **Developer**: The end user interacting with the system
-- **Amazon Q / IDE**: The IDE with Amazon Q integration where users input natural language queries
+- **Amazon Q**: AWS's AI-powered assistant integrated into the IDE, processing natural language queries
 
-### MCP Servers
-#### Core MCP Servers
-- **Core MCP**: Handles core MCP protocol functionality
-- **GitHub MCP**: Provides GitHub integration capabilities
-- **Cost Analysis MCP**: Analyzes AWS service costs
-- **AWS Diagram MCP**: Generates AWS architecture diagrams
-
-#### OpenSearch MCP
-- **OpenSearch MCP Server**: Translates natural language queries into OpenSearch operations
+### MCP Server
+- **OpenSearch MCP Server**: Core component that translates natural language queries into OpenSearch operations
 
 ### Docker Environment
 #### OpenSearch Cluster
@@ -30,33 +23,32 @@ The integration between Amazon Q, MCP servers, and OpenSearch involves several c
 ## Connection Flow
 
 1. **User Interaction**
-   - Developer interacts with Amazon Q in their IDE
-   - Natural language queries are processed by Amazon Q
+   - Developer inputs natural language queries to Amazon Q
+   - Amazon Q processes and understands the intent of the query
 
 2. **MCP Server Processing**
-   - Queries are routed to appropriate MCP servers
-   - OpenSearch MCP server translates natural language to OpenSearch operations
-   - Other MCP servers handle their specific domains (GitHub, Cost Analysis, etc.)
+   - Queries are routed to the OpenSearch MCP server
+   - Natural language is translated into specific OpenSearch operations
+   - Results are formatted for user consumption
 
 3. **OpenSearch Integration**
-   - OpenSearch MCP server communicates with OpenSearch cluster
+   - OpenSearch MCP server communicates directly with the OpenSearch cluster
    - Results are returned through Amazon Q to the user
-   - OpenSearch Dashboards provides direct visualization capabilities
+   - OpenSearch Dashboards provides additional visualization capabilities
 
 ## Security
 
-- All communications use secure protocols
-- Authentication is required for OpenSearch access
-- MCP servers run with specific security contexts
-- Docker environment is isolated with defined network boundaries
+- Secure communication between all components
+- Authentication required for OpenSearch access
+- Docker environment isolated with defined network boundaries
 
 ## Data Flow
 
-1. **Input Flow**
-   - User → Amazon Q → MCP Servers → OpenSearch
+1. **Query Flow**
+   - User → Amazon Q → OpenSearch MCP Server → OpenSearch
 
-2. **Output Flow**
-   - OpenSearch → MCP Servers → Amazon Q → User
+2. **Response Flow**
+   - OpenSearch → OpenSearch MCP Server → Amazon Q → User
 
 3. **Management Flow**
    - User → OpenSearch Dashboards → OpenSearch
