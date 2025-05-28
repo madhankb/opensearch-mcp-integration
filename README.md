@@ -8,7 +8,6 @@ This guide provides step-by-step instructions for setting up OpenSearch with Ama
 - Python 3.x installed
 - pipx installed (`pip install pipx`)
 - Amazon Q subscription
-- GitHub account with personal access token
 
 ## 1. Setting up Local OpenSearch Instance
 
