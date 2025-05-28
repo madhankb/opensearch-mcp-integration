@@ -1,4 +1,4 @@
-# OpenSearch MCP Integration Guide
+# OpenSearch MCP <> LLM Integration Guide
 
 This guide provides step-by-step instructions for integrating Amazon Q with OpenSearch using MCP servers for natural language interactions.
 
