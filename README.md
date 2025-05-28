@@ -1,6 +1,6 @@
 # OpenSearch MCP Integration Guide
 
-This guide provides step-by-step instructions for setting up OpenSearch with Amazon Q using MCP servers for natural language interactions.
+This guide provides step-by-step instructions for integrating Amazon Q with OpenSearch using MCP servers for natural language interactions.
 
 ## Prerequisites
 
