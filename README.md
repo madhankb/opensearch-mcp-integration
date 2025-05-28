@@ -91,8 +91,8 @@ This guide provides step-by-step instructions for integrating Amazon Q & Anthrop
 
 ## 3. Configuring LLMs with MCP server configurations
 
-- `Amazon Q`: Create a `mcp.json` file in your Amazon Q configuration directory (~/.aws/amazonq/mcp.json)
-- `Anthropic Claude`: Create a `claude_desktop_config.json` file in your Claude Desktop configuration directory (~/Library/Application Support/Claude/claude_desktop_config.json)
+1. `Amazon Q`: Create a `mcp.json` file in your Amazon Q configuration directory (~/.aws/amazonq/mcp.json)
+2. `Anthropic Claude`: Create a `claude_desktop_config.json` file in your Claude Desktop configuration directory (~/Library/Application Support/Claude/claude_desktop_config.json)
    ```json
    {
      "mcpServers": {
