@@ -159,7 +159,7 @@ Here are some example commands you can try in LLMs:
    - Check OpenSearch logs (`docker compose logs opensearch`)
 
 2. If tools are not available:
-   - Restart Amazon Q
+   - Restart the LLMs 
    - Check MCP server logs
    - Verify the `mcp_config.json` syntax
 
