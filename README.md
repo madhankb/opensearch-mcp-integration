@@ -116,15 +116,15 @@ This guide provides step-by-step instructions for integrating Amazon Q/Anthropic
 
 1. Check OpenSearch is running:
    ```bash
-   curl -X GET -u admin:myStrongPassword123! http://localhost:9200
+   curl -XGET -u admin:myStrongPassword123! https://localhost:9200
    ```
 
 2. Verify OpenSearch Dashboards:
-   - Open http://localhost:5601 in your browser
+   - Open https://localhost:5601 in your browser
 
 3. Check indices:
    ```bash
-   curl -X GET -u admin:myStrongPassword123! http://localhost:9200/_cat/indices
+   curl -XGET -u admin:myStrongPassword123! https://localhost:9200/_cat/indices
    ```
 
 ## 5. Using Natural Language with OpenSearch
