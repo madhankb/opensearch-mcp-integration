@@ -1,6 +1,6 @@
 # OpenSearch MCP <> LLM Integration Guide
 
-This guide provides step-by-step instructions for integrating Amazon Q/Anthropic Claude desktop with OpenSearch using MCP servers for natural language interactions.
+This guide provides step-by-step instructions for integrating Amazon Q & Anthropic Claude desktop with OpenSearch using MCP servers for natural language interactions.
 
 ## Prerequisites
 
