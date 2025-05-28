@@ -4,7 +4,7 @@ The integration between Amazon Q and OpenSearch involves a streamlined architect
 
 ## Architecture Diagram
 
-![Architecture Diagram](../generated-diagrams/mcp-opensearch-focused-architecture.png)
+![Architecture Diagram](../generated-diagrams/mcp-opensearch-custom-architecture.png)
 
 ## Components
 
