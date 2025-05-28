@@ -89,9 +89,10 @@ This guide provides step-by-step instructions for integrating Amazon Q/Anthropic
    pipx install opensearch-mcp-server
    ```
 
-## 3. Configuring Amazon Q MCP
+## 3. Configuring LLMs with MCP server configurations
 
-1. Create a `mcp_config.json` file in your Amazon Q configuration directory (refer to Amazon Q documentation for the exact location):
+- `Amazon Q`: Create a `mcp.json` file in your Amazon Q configuration directory (~/.aws/amazonq/mcp.json)
+- `Anthropic Claude`: Create a `claude_desktop_config.json` file in your Claude Desktop configuration directory (~/Library/Application Support/Claude/claude_desktop_config.json)
    ```json
    {
      "mcpServers": {
