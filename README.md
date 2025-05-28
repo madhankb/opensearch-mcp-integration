@@ -110,7 +110,7 @@ This guide provides step-by-step instructions for integrating Amazon Q/Anthropic
    }
    ```
 
-   Replace `YOUR_USERNAME` with your system username.
+   Replace `YOUR_USERNAME` with your system username or specify the location where the opensearch-mcp-server is installed.
 
 ## 4. Verifying the Setup
 
