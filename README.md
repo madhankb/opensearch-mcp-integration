@@ -47,11 +47,9 @@ This guide provides step-by-step instructions for setting up OpenSearch with Ama
        image: opensearchproject/opensearch-dashboards:latest
        environment:
          - 'OPENSEARCH_HOSTS=["http://opensearch:9200"]'
-         - "OPENSEARCH_SECURITY_ADMIN_PASSWORD=myStrongPassword123!"
+         - "DISABLE_SECURITY_DASHBOARDS_PLUGIN=true"
        ports:
          - 5601:5601
-       depends_on:
-         - opensearch
        networks:
          - opensearch-net
 
@@ -62,14 +60,9 @@ This guide provides step-by-step instructions for setting up OpenSearch with Ama
      opensearch-net:
    ```
 
-3. Start the OpenSearch cluster:
+3. Start the containers:
    ```bash
    docker compose up -d
-   ```
-
-4. Verify the cluster is running:
-   ```bash
-   curl -u admin:myStrongPassword123! http://localhost:9200/_cluster/health
    ```
 
 ## 2. Installing OpenSearch MCP Server
@@ -79,21 +72,9 @@ This guide provides step-by-step instructions for setting up OpenSearch with Ama
    pipx install opensearch-mcp-server
    ```
 
-2. Verify the installation:
-   ```bash
-   opensearch-mcp-server --version
-   ```
+## 3. Configuring Amazon Q MCP
 
-## 3. Setting up Amazon Q and MCP Configuration
-
-1. Install Amazon Q from the [AWS Toolkit](https://aws.amazon.com/amazon-q/)
-
-2. Create a `.codeium/windsurf` directory in your home folder:
-   ```bash
-   mkdir -p ~/.codeium/windsurf
-   ```
-
-3. Create `mcp_config.json` with the following content:
+1. Create a `mcp_config.json` file in your Amazon Q configuration directory (refer to Amazon Q documentation for the exact location):
    ```json
    {
      "mcpServers": {
@@ -110,19 +91,21 @@ This guide provides step-by-step instructions for setting up OpenSearch with Ama
    }
    ```
 
-   Replace `YOUR_USERNAME` and `your-github-token` with your actual values.
+   Replace `YOUR_USERNAME` with your system username.
 
-## 4. Verifying MCP Server Connection
+## 4. Verifying the Setup
 
-1. Start Amazon Q
-
-2. Check MCP server status in Amazon Q:
-   - Look for the green connection status indicator
-   - Check the available tools by typing `/tools` in the chat
-
-3. Verify OpenSearch connection:
+1. Check OpenSearch is running:
    ```bash
-   curl -u admin:myStrongPassword123! http://localhost:9200/_cat/indices
+   curl -X GET -u admin:myStrongPassword123! http://localhost:9200
+   ```
+
+2. Verify OpenSearch Dashboards:
+   - Open http://localhost:5601 in your browser
+
+3. Check indices:
+   ```bash
+   curl -X GET -u admin:myStrongPassword123! http://localhost:9200/_cat/indices
    ```
 
 ## 5. Using Natural Language with OpenSearch
@@ -177,7 +160,6 @@ The OpenSearch MCP server provides several tools for interacting with OpenSearch
 1. Always use strong passwords in production
 2. Enable SSL in production environments
 3. Regularly rotate credentials
-4. Keep your GitHub token secure
 
 ## Additional Resources
 
