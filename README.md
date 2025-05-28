@@ -132,7 +132,7 @@ Here are some example commands you can try in Amazon Q:
 
 1. Create an index:
    ```
-   Create a new index called "books" with text and keyword fields
+   Create a new index called "books" with title and author fields
    ```
 
 2. Add documents:
