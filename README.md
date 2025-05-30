@@ -2,6 +2,8 @@
 
 This guide provides step-by-step instructions for integrating Amazon Q & Anthropic Claude desktop with OpenSearch using MCP servers for natural language interactions.
 
+![](https://github.com/madhankb/opensearch-mcp-integration/blob/main/claude.gif)
+
 ## Prerequisites
 
 - Docker and Docker Compose installed
